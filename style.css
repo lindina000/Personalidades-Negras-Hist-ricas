@@ -1,0 +1,177 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f6f0; /* Tom de fundo suave/palha */
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* --- CABEÇALHO --- */
+header {
+    background-color: #7a2626; /* Vermelho terracota cultural */
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 5px solid #e5a93b; /* Detalhe em ouro/amarelo */
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-style: italic;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* --- LAYOUT PRINCIPAL --- */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    gap: 2rem;
+}
+
+/* --- MENU LATERAL (TEMAS) --- */
+nav {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    max-height: 80vh;
+    overflow-y: auto; /* Adiciona barra de rolagem se a lista for longa */
+}
+
+nav h2 {
+    font-size: 1.2rem;
+    color: #7a2626;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e5a93b;
+    padding-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin-bottom: 0.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555555;
+    font-size: 0.95rem;
+    display: block;
+    padding: 0.4rem 0.5rem;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: #f5eae3;
+    color: #7a2626;
+    font-weight: bold;
+}
+
+/* --- ÁREA DO CONTEÚDO (MAIN) --- */
+main {
+    flex: 3;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.tema-tag {
+    background-color: #e5a93b;
+    color: #ffffff;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+main h2 {
+    font-size: 2rem;
+    color: #7a2626;
+    margin-bottom: 1.5rem;
+}
+
+main p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+/* --- ESTRUTURA DOS 4 ESPAÇOS DE IMAGENS --- */
+.galeria-pesquisa {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas de tamanho igual */
+    gap: 1.5rem; /* Espaço entre as imagens */
+    margin: 2rem 0;
+}
+
+.item-galeria {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-galeria img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #dddddd;
+}
+
+.referencia-imagem {
+    font-size: 0.75rem; /* Tamanho pequenininho para a referência */
+    color: #666666;
+    margin-top: 0.4rem;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+/* --- CRÉDITOS E RODAPÉ --- */
+.creditos-aluno {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #cccccc;
+    font-style: italic;
+    color: #666666;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVIDADE (PARA CELULARES) --- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    nav {
+        max-height: 250px;
+    }
+    .galeria-pesquisa {
+        grid-template-columns: 1fr; /* Em telas pequenas, as imagens ficam uma embaixo da outra */
+    }
+}
